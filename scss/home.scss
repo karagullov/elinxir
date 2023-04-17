@@ -1,0 +1,226 @@
+@import './variables';
+
+#home {
+
+	.home__content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		background-image: url('./../images/BG.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 10px;
+		height: 65.5vh;
+		margin-top: 2rem;
+
+
+		.border {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+
+		.home__content-info {
+			width: 40%;
+			z-index: 999;
+
+			.text {
+				margin-left: 4rem;
+
+				span,
+				h1,
+				p {
+					color: $white;
+					letter-spacing: 1px;
+				}
+
+				span {
+					color: $gray;
+				}
+
+				h1 {
+					font-size: 2.5rem;
+					font-weight: 300;
+					margin: 1rem 0;
+				}
+
+				p {
+					text-transform: uppercase;
+					font-weight: 200;
+					line-height: 1.5;
+					margin-bottom: 2rem;
+					font-size: 1rem;
+				}
+
+				.btn {
+					text-transform: uppercase;
+					border: none;
+					padding: 1rem;
+					background-color: $white;
+					color: $dark;
+					border-bottom-left-radius: 1.8rem;
+					border-bottom-right-radius: 1rem;
+					border-top-right-radius: 1.4rem;
+					font-size: .8rem;
+				}
+			}
+		}
+
+		.top-icons {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			right: 2rem;
+			top: 1rem;
+			width: 300px;
+
+			.first-ics {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				span {
+					width: 20px;
+					height: 2px;
+					background-color: $white;
+					margin: 0 5px;
+				}
+
+				.fill {
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					background-color: $white;
+					margin-left: 5px;
+				}
+
+				.circle {
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					border: 1px solid $white;
+					margin-left: 5px;
+				}
+			}
+
+
+			.second-icon {
+				width: 20px;
+				height: 20px;
+				border: 1px solid $white;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				span {
+					width: 10px;
+					height: 10px;
+					border: 1px solid $white;
+					border-radius: 50%;
+				}
+			}
+
+		}
+
+		.bottom-icons {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			right: 2rem;
+			bottom: 1rem;
+			width: 250px;
+		}
+
+		.home-logo {
+			position: absolute;
+			border: 1px solid $white;
+			border-radius: 50%;
+			padding: 1rem;
+			right: 3rem;
+			bottom: 5rem;
+		}
+	}
+}
+@media (max-width: 1400px){
+	#home {
+		.home__content{
+			.home-gra, .home-gra-1{
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	#home {
+		.home__content {
+			background-image: url('./../images/phone-bg.svg');
+			background-position: 100% 100%;
+			background-repeat: no-repeat;
+			background-size: 350px;
+			height: 90vh;
+			border: .5px solid $white;
+			border-radius: 2rem;
+
+			.home__content-info {
+				.text {
+					margin-left: 2rem;
+
+					p {
+						margin-bottom: 4rem;
+					}
+				}
+			}
+
+			.home-gra{
+				display: block;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				border-bottom-right-radius: 2rem;
+				z-index: -1;
+			}
+
+			.home-gra-1{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-top-left-radius: 2rem;
+				z-index: -1;
+			}
+
+			.bottom-icons {
+				left: 2rem;
+				bottom: 16rem;
+				justify-content: flex-start;
+
+				img {
+					margin-right: 1rem;
+				}
+			}
+
+			.home-logo {
+				display: none;
+			}
+
+			.border {
+				display: none;
+			}
+
+			.home__content-info {
+				width: 100%;
+			}
+
+		}
+	}
+}
+

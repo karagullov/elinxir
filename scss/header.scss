@@ -1,0 +1,117 @@
+@import './variables';
+
+#header {
+	padding: 1rem 0;
+	position: relative;
+	.header__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.header__content-left {
+			.lists {
+				display: flex;
+				align-items: center;
+
+				.list {
+					display: flex;
+					align-items: center;
+					margin-left: 2rem;
+
+					.link {
+						color: $white;
+						text-transform: uppercase;
+						font-weight: 300;
+					}
+
+					img {
+						transform: rotate(90deg);
+						margin-left: 10px;
+						width: 5px;
+					}
+				}
+			}
+		}
+
+		.header__content-logo {
+			.hr-line{
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+			}
+			.brend {
+				width: 200px;
+				margin-left: 2rem;
+				margin-top: .7rem;
+			}
+		}
+
+		.header__content-right {
+			display: flex;
+			.lists {
+				display: flex;
+				align-items: center;
+
+				.list {
+					display: flex;
+					align-items: center;
+					margin-left: 2rem;
+
+					.link {
+						color: $white;
+						text-transform: uppercase;
+						font-weight: 300;
+					}
+
+					img {
+						transform: rotate(90deg);
+						margin-left: 10px;
+						width: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 576px) {
+	#header {
+		background-image: url('./../images/hr-line.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 0;
+		.header__content {
+			.header__content-left {
+				.lists{
+					display: none;
+				}
+			}
+
+			.header__content-right {
+				.lists {
+					display: none;
+				}
+			}
+
+			.header__content-logo {
+				padding-top: 1.5rem;
+
+				.hr-line{
+					display: none;
+				}
+				.brend {
+					margin: 0;
+					margin-left: 3rem;
+				}
+			}
+
+			#menu {
+				color: $white;
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
